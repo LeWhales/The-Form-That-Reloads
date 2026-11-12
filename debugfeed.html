@@ -1,0 +1,16 @@
+<script src="FormDebug.js"></script>
+
+<body>
+    <form id="profile">
+        <label for="name">Name</label>
+        <input id="name" name="name">
+        <button type="submit">Save</button>
+        <p id="error" role="alert"></p>
+        <form>
+            <script> const form = document.querySelector("#profile");
+                form.addEventListener("submit", () => {
+                    const name = document.querySelector("#name").value;
+                    if (name === "") { showError("Required") };
+                }); </script>
+
+            <body>
